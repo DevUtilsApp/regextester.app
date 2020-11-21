@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
+RegExp Tester
+=============
 
-You can use the [editor on GitHub](https://github.com/DevUtilsApp/regextester.app/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Test your regular expressions without online tools. [DevUtils.app](https://devutils.app) allows you to quickly test regular expressions with a sample text without any internet connection. It supports ICU regex engine and flags: case sensitive, white space, comments, line separator options...
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p align="center">
+  <img src="https://devutils.app/assets/demo-regexp-tester-dark.png" alt="DevUtils.app: RegExp Tester macOS app"/>
+  <br/>
+  <a href="https://devutils.app/">🚀  Download</a> | <a href="https://devutils.app/demo">🎬  Demo & Screenshots</a> | <a href="https://github.com/DevUtilsApp/DevUtils-app">📝  View source</a>
+</p>
 
-### Markdown
+Quickly test a regular expression
+---------------------------------
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You can test a regular expression from anywhere in your macOS (terminal, in email, web browser,...). Activate the app by:
 
-```markdown
-Syntax highlighted code block
+* Copy text ► Press ⌃⌥⌘Space `(Or your own customized hotkey, up to you)`
+* Copy text ► Click to icon <img src="https://devutils.app/menu-icon-dark.png" alt="DevUtils.app status bar icon" width="28px" /> in the status bar
+* Select text ► Right-click ► "Inspect in DevUtils.app" `(This menu appears after you install the app)`
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+Input
+-----
 
-1. Numbered
-2. List
+Enter your regular expression in the input textbox and the sample text in the second textbox. The matches will be highlighted as you type.
 
-**Bold** and _Italic_ and `Code` text
+You can also load the sample text from a file from your computer using the "Load file..." button.
 
-[Link](url) and ![Image](src)
-```
+Output
+------
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The tool will render the matches with green background. You can also inspect each matches using the text view at the bottom. The text view lists all the matches separated by a new line.
 
-### Jekyll Themes
+You can navigate to each matches by clicking the "back" and "forward" button. The label in between displays the number of matches for the current regex.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DevUtilsApp/regextester.app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Options
+-------
 
-### Support or Contact
+Currently, the supported regex engines are:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+*   ICU Engine
+
+Supported flags:
+
+*   Case insensitive
+*   Allow use of white space and #comments within patterns
+*   "." matches line separators
+*   "^" and "$" matches at the start and end of each line within the input text
+*   "\\b" matches words based on boundaries defined in Unicode UAX 29, Text Boundaries
+
+You can click to the gear icon to set the flags.
+
+![DevUtils.app: RegExp Tester Settings macOS app](https://devutils.app/assets/settings/setting-regexp-tester.png)
